@@ -1,4 +1,5 @@
 # ImPyWeather
+Just another simple weather app written in Python. The code won't be the prettiest.
 - Currently only a CLI
 - GUI coming soon...
 # Configuration
