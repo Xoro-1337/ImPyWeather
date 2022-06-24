@@ -5,7 +5,7 @@
 import requests, json, os
 
 #API kemain from openweathermap.org
-api_key = '3ca3302d03054265c39bb27b2137b738'
+api_key = ''
 
 #base url to store url from api
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
