@@ -25,8 +25,8 @@ def kelvinToFahrenheit(k:int) -> int:
     return round(farenheit)
 
 # convert kelvin to fahrenheit
-def kelvinToCelcius(k:int) -> int:
-    celcius = k - 273.15
+def kelvinToCelsius(k:int) -> int:
+    celsius = k - 273.15
     return round(celcius)
 
 # convert m/s to mph
@@ -65,16 +65,11 @@ def main():
         cloud_results = results['clouds']
         cloudiness = cloud_results['all']
 
-        # call for conversion
-        fahrenheit_temperature = kelvinToFahrenheit(kelvin_temperature)
-        celcius_temperature = kelvinToCelcius(kelvin_temperature)
-        wind_speed_mph = mpsToMPH(wind_speed)
-
         clearScreen()
         print(
-            'Temperature = ' + str(fahrenheit_temperature) + '°F / ' + str(celcius_temperature) + '°C' + \
+            'Temperature = ' + str(kelvinToFahrenheit(kelvin_temperature)) + '°F / ' + str(kelvinToCelsius(kelvin_temperature)) + '°C' + \
             '\n\nHumidity = ' + str(current_humidity) + '%' + \
-            '\n\nWind = ' + degreeToCardinal(wind_direction) + ' @ ' + str(wind_speed_mph) + 'mph / ' + str(wind_speed) + 'm/s' + \
+            '\n\nWind = ' + degreeToCardinal(wind_direction) + ' @ ' + str(mpsToMPH(wind_speed)) + 'mph / ' + str(wind_speed) + 'm/s' + \
             '\n\nCloudiness = ' + str(cloudiness) + "%" + \
             '\n\nWeather Description = ' + str(weather_description) 
             )
